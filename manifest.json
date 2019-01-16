@@ -1,0 +1,19 @@
+{
+  "name": "Simple Site Blocker",
+  "version": "1.0",
+  "description": "Shows white screen with 'blocked' message on sites you don't want to waste time on",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bbc.co.uk/*",
+        "*://*.espn.co.uk/*",
+        "*://*.reddit.com/*",
+        "*://*.theguardian.com/*"
+      ],
+      "css": ["block.css"],
+      "js": ["block.js"]
+    }
+  ],
+  "manifest_version": 2
+}
